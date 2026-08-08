@@ -8,6 +8,9 @@ The book appears to be an early modern parlor game. Its 144 questions are sorted
 
 The fortunes in the book are listed on pages that each feature a ”magic” name. These may have originally been names of stars, but in the English version of the book they are pretty thoroughly turned into gibberish. Still, this app shows you what they are, after the page and verse number of your fortune.
 
+## The App
+*The Dodechedron of Fortune* app is a Progressive Web App (PWA); a website that can be used directly from your browser, or set up on your phone to behave like an app. To do this, open the app URL [https://litlnemo.github.io/dodechedron-of-fortune/](https://litlnemo.github.io/dodechedron-of-fortune/) in Safari (iPhone) or Chrome (Android), then use Share → Add to Home Screen (iOS) or the Install app option (Android). 
+
 ## Sources
 This digital edition draws on:
 
