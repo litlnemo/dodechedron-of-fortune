@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Dodechedron of Fortune</title>
+    <link rel="stylesheet" href="dodec1.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2e2416">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Dodechedron">
+</head>
+
+<body>
+    <div id="frame">
+        <img id="cornice-top" src="assets/cornice-top.webp" alt="">
+
+        <div id="colonnade">
+            <div class="column column-left" aria-hidden="true">
+                <img class="col-cap" src="assets/column-left-cap.png" alt="">
+                <div class="col-shaft"></div>
+                <img class="col-foot" src="assets/column-left-foot.png" alt="">
+            </div>
+
+            <div id="container">
+                <h1 class="title">
+                    <span class="title-line--display">The</span>
+                    <span class="title-line--wordmark">Dodechedron</span>
+                    <span class="title-line--display">of Fortune</span>
+                </h1>
+                <p class="subtitle">Or, the Exercise of a Quick Wit &mdash; Englished by Sr. W. B., Knight</p>
+
+                <hr class="rule" />
+
+                <div class="hero-wrap">
+                    <div class="hero-stage">
+                        <img class="hero-base" src="assets/angel-die.webp" alt="A woodcut of an angel presenting a twelve-sided die in an open case, reading NOW CAST YE THE DYE">
+                        <button type="button" class="die-hotspot" aria-label="Cast the die" onclick="animateDieAndTellFortune()">
+                            <img id="dieOverlay" src="assets/die-1.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <form class="consult" onsubmit="return false;">
+                    <div class="field">
+                        <label for="house">Select a House</label>
+                        <select id="house" name="house">
+                            <!-- options filled in by dodec1.js from HOUSES -->
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="q_num">Select a Query</label>
+                        <select id="q_num" name="q_num">
+                            <!-- options filled in by dodec1.js from HOUSES, based on the chosen house -->
+                        </select>
+                    </div>
+                </form>
+
+                <div class="leaf">
+                    <div id="questionPrint"></div>
+                    <div id="answerPage"></div>
+                    <div id="workings" class="workings"></div>
+                </div>
+
+                <div class="cast-wrap">
+                    <button type="button" class="cast" onclick="animateDieAndTellFortune()">Cast&nbsp;the&nbsp;Die</button>
+                </div>
+
+                <div class="toggle" role="group" aria-label="Typeface">
+                    <button type="button" id="btn-blackletter" aria-pressed="true" onclick="setTypeface('blackletter')">Period</button>
+                    <button type="button" id="btn-modern" aria-pressed="false" onclick="setTypeface('modern')">Modern</button>
+                </div>
+
+                <p class="colophon-link"><a href="credits.html">About this book &amp; credits</a></p>
+            </div>
+
+            <div class="column column-right" aria-hidden="true">
+                <img class="col-cap" src="assets/column-right-cap.png" alt="">
+                <div class="col-shaft"></div>
+                <img class="col-foot" src="assets/column-right-foot.png" alt="">
+            </div>
+        </div>
+
+        <img id="base-bottom" src="assets/base.webp" alt="">
+    </div>
+
+    <script src="dodec-questions.js"></script>
+    <script src="dodec-answers.js"></script>
+    <script src="typeface-toggle.js"></script>
+    <script src="dodec1.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("sw.js");
+            });
+        }
+    </script>
+
+</body>
+
+</html>

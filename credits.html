@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About &amp; Credits — The Dodechedron of Fortune</title>
+    <link rel="stylesheet" href="dodec1.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2e2416">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+</head>
+
+<body>
+    <div id="frame">
+        <img id="cornice-top" src="assets/cornice-top.webp" alt="">
+
+        <div id="colonnade">
+            <div class="column column-left" aria-hidden="true">
+                <img class="col-cap" src="assets/column-left-cap.png" alt="">
+                <div class="col-shaft"></div>
+                <img class="col-foot" src="assets/column-left-foot.png" alt="">
+            </div>
+
+            <div id="container">
+                <h1 class="title">
+                    <span class="title-line--display">About the</span>
+                    <span class="title-line--wordmark">Dodechedron</span>
+                    <span class="title-line--display">of Fortune</span>
+                </h1>
+
+                <p class="back-link"><a href="dodec1.html">&larr; Back to the book</a></p>
+
+                <hr class="rule" />
+
+                <div class="credits-section">
+                    <h2>The Book</h2>
+                    <p>
+                        The Dodechedron <em>(sic)</em> of Fortune began in France as <em>Le Dodechedron de Fortune</em>
+                        (also printed under the fuller title <em>Le Plaisant Jeu du Dodechedron de
+                        Fortune</em>), first published in Paris in 1556. It is traditionally credited to the poet Jean de Meun (c.&nbsp;1240&ndash;c.&nbsp;1305),
+                        best remembered for completing the <em>Roman de la Rose</em>; though he had
+                        been dead two and a half centuries by the time the book appeared, and modern
+                        scholars treat the attribution with some skepticism.
+                    </p>
+                    <p>
+                        An English translation followed:
+                        <em>The Dodechedron of Fortune; or, The Exercise of a Quick Wit</em>, &ldquo;Englished
+                        by Sr.&nbsp;W.&nbsp;B., Knight&rdquo;, whose identity remains unknown. It was printed in London in 1613 by
+                        John Pindley, for H.&nbsp;Hooper and S.&nbsp;Man.
+                    </p>
+                    <p>
+                        The book appears to be an early modern parlor game. Its 144 questions are sorted
+                        into twelve astrological &ldquo;houses,&rdquo; and a twelve-sided die &mdash; a
+                        dodecahedron, hence the title &mdash; is cast to carry you from your question
+                        to one of twelve possible verse answers, for 1,728 possible fortunes in all.
+                    </p>
+		    <p>
+                        The fortunes in the book are listed on pages that each feature a "magic" name. These may have originally been names of stars, but in the English version of the book they are pretty thoroughly turned into gibberish. Still, this app shows you what they are, after the page and verse number of your fortune.
+                    </p>
+                </div>
+
+                <div class="credits-section">
+                    <h2>Sources</h2>
+                    <p>This digital edition draws on:</p>
+                    <ul>
+                        <li>A page-image scan of the 1613 English edition via
+                            <a href="https://books.google.com/books?id=fYxmAAAAcAAJ" target="_blank" rel="noopener">Google Books</a>,
+                            the original inspiration for the app, and used as the source for transcription.</li>
+                        <li>The <a href="https://quod.lib.umich.edu/e/eebo2/A07461.0001.001" target="_blank" rel="noopener">Early English Books Online Text Creation Partnership (EEBO-TCP) edition</a>,
+                            used to check and correct the transcription.</li>
+                    </ul>
+                </div>
+
+		<div class="credits-section">
+                    <h2>A Note About Language</h2>
+                    <p>Please note that the language used here is drawn directly from the 1613 edition of the book. The spellings are as they were in the book, as is all word usage. Some words have different meanings now than they did then, and some text may be difficult to understand, either because of spellings, archaic meanings, or general fortune-telling vagueness. No offense is ever meant by anything included here.
+                </div>
+
+                <div class="credits-section">
+                    <h2>This Edition</h2>
+                    <p>
+                        App design, graphic design, and artwork
+                        (adapted from period book title-page woodcuts) by <strong>Wendi Dunlap</strong>.
+                    </p>
+                    <p class="fine-print">
+                        Body and display type (when app is in "Period" mode) set in IM&nbsp;Fell English, Igino Marini's digital
+                        revival of the Fell typeface cut by the Dutch typefounder
+                        Christoffel van Dijck, acquired by John Fell, Bishop of Oxford, in the 1670s,
+                        and bequeathed to Oxford University Press in 1686.
+                    </p>
+		    <p class="fine-print">
+                        The software <em>Affinity</em> was used for graphic creation and editing.
+                    </p>
+                </div>
+
+                <div class="toggle" role="group" aria-label="Typeface">
+                    <button type="button" id="btn-blackletter" aria-pressed="true" onclick="setTypeface('blackletter')">Period</button>
+                    <button type="button" id="btn-modern" aria-pressed="false" onclick="setTypeface('modern')">Modern</button>
+                </div>
+
+                <p class="colophon-link"><a href="dodec1.html">&larr; Back to the book</a></p>
+            </div>
+
+            <div class="column column-right" aria-hidden="true">
+                <img class="col-cap" src="assets/column-right-cap.png" alt="">
+                <div class="col-shaft"></div>
+                <img class="col-foot" src="assets/column-right-foot.png" alt="">
+            </div>
+        </div>
+
+        <img id="base-bottom" src="assets/base.webp" alt="">
+    </div>
+
+    <script src="typeface-toggle.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", initTypeface);
+    </script>
+</body>
+
+</html>
